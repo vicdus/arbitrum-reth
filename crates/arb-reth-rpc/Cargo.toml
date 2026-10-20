@@ -38,3 +38,7 @@ reth-tokio-util = { git = "https://github.com/nuntax/reth.git", rev = "547581ff5
 reth-transaction-pool = { git = "https://github.com/nuntax/reth.git", rev = "547581ff58e62577ef880e986a1b870feaa1a1b0" }
 reth-network-api = { git = "https://github.com/nuntax/reth.git", rev = "547581ff58e62577ef880e986a1b870feaa1a1b0" }
 jsonrpsee = { version = "0.26.0", features = ["server", "http-client"] }
+
+[dev-dependencies]
+# CI only (not for upstream): proptest 1.12.0 (2026-10-10) breaks proptest-arbitrary-interop 0.1.0 without a lockfile
+proptest = "=1.11.0"
